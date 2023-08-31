@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th = "www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>easyLogin</title>
+<style>
+
+body{
+  margin:0;
+  padding:0;
+  
+}
+body{
+  width: 45%;
+}
+
+h1 {
+    font-family: 游ゴシック;
+    border-bottom: 2px solid #212121;
+    border-left: 5px double #212121;
+    background-color: #d2dbbb;
+   
+}
+
+span {
+  background-color: rgba(162,192,86,.3);
+}
+.newMember{
+   background-color: 3px solid #9dbf4a;
+}
+input[name=username]{
+  width:100px;
+}
+
+.Btns{
+  margin-top: 2em;
+}
+
+.login{
+  position: relative;
+  text-align: center;
+  }
+  
+.newMem{
+  border:2px dashed #6e9b02 ;
+  text-align: center;
+  margin:0 auto;
+  margin-top: 1em; 
+  
+}
+
+button{
+  display       : inline-block;
+  border-radius :  6%;          /* 角丸       */
+  font-size     : 11pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 5px 6px;   /* 余白       */
+  background    : rgb(69 81 62);    /* 背景色     */
+  color         : rgb(255, 255, 255);     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 1;           /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 1px 1px 14px #666666;  /* 影の設定 */
+}
+button:hover{
+   box-shadow    : none;        /* カーソル時の影消去 */
+  opacity       : 0.8;         /* カーソル時透明度 */
+}
+
+
+ 
+  </style>
+  
+<script>
+  
+function coloeSet(argObj){
+
+ // 入力済み時の背景色設定
+
+    if(argObj.value==""){
+        argObj.style.backgroundColor = "";
+    }else{
+        argObj.style.backgroundColor = "rgba(74, 106, 54, 0.20)";
+    }
+}
+
+function colorReset(argObj){
+    argObj.style.backgroundColor = "";
+}
+
+</script>
+  
+</head>
+<header>
+  <h1>ログイン画面(easylogin)</h1>
+</header>
+
+<body>
+  <div class="login">
+    
+    <p>ユーザー名とパスワードを入力してください</p>
+  
+    <form name = "loginForm" action="./login">
+      <div>
+        <span>ユーザー名:</span>
+        <input type="text" name = "userName" placeholder="userId"/>
+      </div>
+      
+      <div>
+        <span>パスワード:</span>
+        <input type="password" name="password" placeholder="password"/>
+      </div>
+      
+      <div>  
+        <button type="submit">ログイン</button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
